@@ -56,6 +56,9 @@ export function Layout<T extends FieldValues>({
           has?.floatingButton
             ? j("sm:pb-20", tabBar.hideOnMobile ? "pb-[4.5rem]" : "pb-[8.5rem]")
             : "",
+          !has?.floatingButton && !has?.bottomToolbar && !tabBar.hideOnMobile
+            ? "pb-[calc(3.5rem+env(safe-area-inset-bottom))] sm:pb-0"
+            : "",
         )}
       >
         {children}
