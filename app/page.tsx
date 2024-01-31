@@ -18,7 +18,6 @@ export default function HomePage() {
           icon: FlaskConical,
           text: "See Preview",
           href: "/preview",
-          isTabBarHiddenOnMobile: true,
         },
       }}
     >
