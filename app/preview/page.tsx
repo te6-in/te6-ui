@@ -114,7 +114,7 @@ export default function PreviewPage() {
   return (
     <Layout
       header={{ background: true, title: "Preview" }}
-      tabBar={{ items: TABS, gridCols: "grid-cols-2", hideOnMobile: true }}
+      tabBar={{ items: TABS, gridCols: "grid-cols-3", hideOnMobile: true }}
       has={{
         bottomToolbar: {
           ...(isShowingInput

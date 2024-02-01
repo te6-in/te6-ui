@@ -10,8 +10,8 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { LayoutTestComponent, gridCols, items } from "../.ladle/LayoutTest";
-import { Layout } from "../src/layout";
+import { Layout } from "../../src/layout";
+import { LayoutTestComponent, gridCols, items } from "../LayoutTest";
 
 interface Form {
   input: string;

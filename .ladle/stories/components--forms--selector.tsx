@@ -1,8 +1,8 @@
 import type { Story, StoryDefault } from "@ladle/react";
 import { AlignCenter, AlignJustify, AlignLeft, AlignRight } from "lucide-react";
 import { useForm } from "react-hook-form";
-import { CenterPadded } from "../.ladle/decorators";
-import { Selector } from "../src/components/forms/Selector";
+import { Selector } from "../../src/components/forms/Selector";
+import { CenterPadded } from "../decorators";
 
 const items = [
   { value: "Left", icon: AlignLeft },

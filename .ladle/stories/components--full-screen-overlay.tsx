@@ -2,9 +2,9 @@ import type { Story, StoryDefault } from "@ladle/react";
 import { ArrowUpRightFromCircle } from "lucide-react";
 import type { Dispatch, SetStateAction } from "react";
 import { useState } from "react";
-import { CenterPadded } from "../.ladle/decorators";
-import { FullScreenOverlay } from "../src/components/FullScreenOverlay";
-import { Button } from "../src/components/controls/Button";
+import { FullScreenOverlay } from "../../src/components/FullScreenOverlay";
+import { Button } from "../../src/components/controls/Button";
+import { CenterPadded } from "../decorators";
 
 interface ShowButtonProps {
   text: string;

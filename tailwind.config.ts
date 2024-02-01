@@ -5,12 +5,7 @@ import { te6TailwindPreset } from "./src/libs/tailwind";
 
 const config: Config = {
   presets: [te6TailwindPreset],
-  content: [
-    "./src/**/*.tsx",
-    "./app/**/*.tsx",
-    "./ladle/**/*.tsx",
-    "./.ladle/**/*.tsx",
-  ],
+  content: ["./src/**/*.tsx", "./app/**/*.tsx", "./.ladle/**/*.tsx"],
   darkMode: ["class", '[data-theme="dark"]'], // this is only for Next.js and Ladle
   theme: {
     extend: {
