@@ -1,7 +1,7 @@
 import type { Story, StoryDefault } from "@ladle/react";
 import { useState } from "react";
-import { CenterPadded } from "../.ladle/decorators";
-import { Toggle } from "../src/components/controls/Toggle";
+import { Toggle } from "../../src/components/controls/Toggle";
+import { CenterPadded } from "../decorators";
 
 const props = {
   title: "Example Toggle",

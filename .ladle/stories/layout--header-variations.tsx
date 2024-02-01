@@ -1,6 +1,6 @@
 import type { Story } from "@ladle/react";
-import { LayoutTestComponent, gridCols, items } from "../.ladle/LayoutTest";
-import { Layout } from "../src/layout";
+import { Layout } from "../../src/layout";
+import { LayoutTestComponent, gridCols, items } from "../LayoutTest";
 
 export const Background: Story = () => (
   <Layout

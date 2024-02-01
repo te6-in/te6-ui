@@ -1,6 +1,6 @@
 import type { Story, StoryDefault } from "@ladle/react";
-import { CenterPadded } from "../.ladle/decorators";
-import { Skeleton } from "../src/components/Skeleton";
+import { Skeleton } from "../../src/components/Skeleton";
+import { CenterPadded } from "../decorators";
 
 export const Lines: Story = () => (
   <Skeleton textClass="text-base" lines={5.8} />

@@ -1,7 +1,7 @@
 import type { Story, StoryDefault } from "@ladle/react";
 import { useForm } from "react-hook-form";
-import { CenterPadded } from "../.ladle/decorators";
-import { Checkbox } from "../src/components/forms/Checkbox";
+import { Checkbox } from "../../src/components/forms/Checkbox";
+import { CenterPadded } from "../decorators";
 
 interface Form {
   checked: boolean;

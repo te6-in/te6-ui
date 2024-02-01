@@ -1,7 +1,7 @@
 import type { Story, StoryDefault } from "@ladle/react";
 import { Archive } from "lucide-react";
-import { CenterPadded } from "../.ladle/decorators";
-import { Button } from "../src/components/controls/Button";
+import { Button } from "../../src/components/controls/Button";
+import { CenterPadded } from "../decorators";
 
 const props = {
   text: "Example Button",

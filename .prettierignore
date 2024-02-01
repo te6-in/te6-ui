@@ -1,2 +1,4 @@
-node_modules/
 dist/
+.next/
+public/ladle/
+node_modules/

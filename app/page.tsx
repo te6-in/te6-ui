@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <Layout
       header={{ background: false, backButton: false }}
-      tabBar={{ items: TABS, gridCols: "grid-cols-2" }}
+      tabBar={{ items: TABS, gridCols: "grid-cols-3" }}
       has={{
         floatingButton: {
           icon: FlaskConical,

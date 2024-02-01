@@ -1,7 +1,7 @@
 import type { Story, StoryDefault } from "@ladle/react";
 import { useForm } from "react-hook-form";
-import { CenterPadded } from "../.ladle/decorators";
-import { TextInput } from "../src/components/forms/TextInput";
+import { TextArea } from "../../src/components/forms/TextArea";
+import { CenterPadded } from "../decorators";
 
 interface Form {
   text: string;
@@ -11,12 +11,12 @@ export const Basic: Story = () => {
   const { register } = useForm<Form>();
 
   return (
-    <TextInput
+    <TextArea
       register={register}
       name="text"
       title="Example"
       placeholder="Example"
-      type="text"
+      rows={5}
     />
   );
 };
@@ -24,17 +24,17 @@ export const Basic: Story = () => {
 export const HasValue: Story = () => {
   const { register } = useForm<Form>({
     defaultValues: {
-      text: "Lorem ipsum dolor,",
+      text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur incidunt exercitationem beatae? Tenetur maxime eligendi quia ut officia ducimus asperiores tempora unde repellendus sit. Veniam porro distinctio non recusandae rem?",
     },
   });
 
   return (
-    <TextInput
+    <TextArea
       register={register}
       name="text"
       title="Example"
       placeholder="Example"
-      type="text"
+      rows={5}
     />
   );
 };
@@ -43,13 +43,13 @@ export const Required: Story = () => {
   const { register } = useForm<Form>();
 
   return (
-    <TextInput
+    <TextArea
       register={register}
       name="text"
       options={{ required: true }}
       title="Example"
       placeholder="Example"
-      type="text"
+      rows={5}
     />
   );
 };
@@ -58,13 +58,13 @@ export const Disabled: Story = () => {
   const { register } = useForm<Form>();
 
   return (
-    <TextInput
+    <TextArea
       register={register}
       name="text"
       options={{ disabled: true }}
       title="Example"
       placeholder="Example"
-      type="text"
+      rows={5}
     />
   );
 };
@@ -73,76 +73,13 @@ export const Error: Story = () => {
   const { register } = useForm<Form>();
 
   return (
-    <TextInput
+    <TextArea
       register={register}
       name="text"
       title="Example"
       placeholder="Example"
-      type="text"
+      rows={5}
       error="Example error"
-    />
-  );
-};
-
-export const WithPrefix: Story = () => {
-  const { register } = useForm<Form>();
-
-  return (
-    <TextInput
-      register={register}
-      name="text"
-      title="Example"
-      placeholder="Example"
-      type="url"
-      prefix="https://"
-    />
-  );
-};
-
-export const WithSuffix: Story = () => {
-  const { register } = useForm<Form>();
-
-  return (
-    <TextInput
-      register={register}
-      name="text"
-      title="Example"
-      placeholder="Example"
-      type="number"
-      suffix="kg"
-    />
-  );
-};
-
-export const WithPrefixAndSuffix: Story = () => {
-  const { register } = useForm<Form>();
-
-  return (
-    <TextInput
-      register={register}
-      name="text"
-      title="Example"
-      placeholder="Example"
-      type="number"
-      prefix="So far"
-      suffix="times"
-    />
-  );
-};
-
-export const WithAffixesDisabled: Story = () => {
-  const { register } = useForm<Form>();
-
-  return (
-    <TextInput
-      register={register}
-      name="text"
-      options={{ disabled: true }}
-      title="Example"
-      placeholder="Example"
-      type="number"
-      prefix="So far"
-      suffix="times"
     />
   );
 };

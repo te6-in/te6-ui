@@ -18,9 +18,7 @@ export const Provider: GlobalProvider = ({ children }) => {
           replace: () => {},
         }}
       >
-        {/* <div className="h-full w-full bg-body p-4 dark:bg-body-dark"> */}
         {children}
-        {/* </div> */}
       </AppRouterContext.Provider>
     </PathnameContext.Provider>
   );
