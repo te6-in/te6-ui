@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "scripts": {
     "build": "rm -rf dist && pnpm format && pnpm lint && tsc --project src && rollup -c && rm -rf dist/types",
-    "format": "prettier --write \"./**/*.{js,jsx,mjs,cjs,ts,tsx,json}\"",
+    "format": "prettier --write .",
     "lint": "eslint .",
     "preview": "next dev",
     "preview-build": "next build",
