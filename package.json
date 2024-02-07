@@ -1,10 +1,11 @@
 {
   "name": "@te6/ui",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "scripts": {
-    "build": "rm -rf dist && pnpm format && pnpm lint && tsc --project src && rollup -c && rm -rf dist/types",
+    "build": "pnpm format && pnpm lint && pnpm rollup-build && pnpm ladle-build && pnpm preview-build",
     "format": "prettier --write .",
     "lint": "eslint .",
+    "rollup-build": "rm -rf dist && tsc --project src && rollup -c && rm -rf dist/types",
     "preview": "next dev",
     "preview-build": "next build",
     "preview-serve": "next start",
