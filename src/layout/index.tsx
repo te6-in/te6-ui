@@ -49,15 +49,23 @@ export function Layout<T extends FieldValues>({
               )
             : "",
           has?.bottomToolbar
-            ? "pb-[4.25rem] sm:pb-[5.375rem]"
-            : tabBar.hideOnMobile
-              ? "pb-0"
-              : "",
-          has?.floatingButton
-            ? j("sm:pb-20", tabBar.hideOnMobile ? "pb-[4.5rem]" : "pb-[8.5rem]")
+            ? "pb-[calc(4.25rem+env(safe-area-inset-bottom))] sm:pb-[calc(5.375rem+env(safe-area-inset-bottom))]"
             : "",
-          !has?.floatingButton && !has?.bottomToolbar && !tabBar.hideOnMobile
-            ? "pb-[calc(3.5rem+env(safe-area-inset-bottom))] sm:pb-0"
+          has?.floatingButton
+            ? j(
+                "sm:pb-[calc(5rem+env(safe-area-inset-bottom))]",
+                tabBar.hideOnMobile
+                  ? "pb-[calc(4.5rem+env(safe-area-inset-bottom))]"
+                  : "pb-[calc(8.5rem+env(safe-area-inset-bottom))]",
+              )
+            : "",
+          !has?.floatingButton && !has?.bottomToolbar
+            ? j(
+                "sm:pb-0",
+                tabBar.hideOnMobile
+                  ? "pb-[env(safe-area-inset-bottom)]"
+                  : "pb-[calc(3.5rem+env(safe-area-inset-bottom))]",
+              )
             : "",
         )}
       >
