@@ -18,7 +18,7 @@ export default function RootLayout({
   // TODO: set proper language
   return (
     <html lang="en">
-      <body>
+      <body className="bg-body dark:bg-body-dark">
         <NextThemeProvider>{children}</NextThemeProvider>
       </body>
     </html>
