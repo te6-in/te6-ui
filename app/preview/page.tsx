@@ -69,6 +69,7 @@ export default function PreviewPage() {
 
   const [showOverlay, setShowOverlay] = useState(false);
 
+  const [isDoingNothing, setIsDoingNothing] = useState(false);
   const [isShowingInput, setIsShowingInput] = useState(false);
   const [isShowingErrors, setIsShowingErrors] = useState(false);
 
@@ -215,8 +216,8 @@ export default function PreviewPage() {
           <div className="flex flex-col gap-4">
             <Toggle
               title="This does absolutely nothing"
-              isOn={false}
-              setIsOn={() => {}}
+              isOn={isDoingNothing}
+              setIsOn={setIsDoingNothing}
             />
             <Toggle
               title="Show error states"
