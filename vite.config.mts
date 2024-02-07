@@ -1,7 +1,7 @@
 import path from "path";
 import { defineConfig, loadEnv } from "vite";
 
-export default defineConfig(({ mode }) => ({
+const viteConfig = defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       "next/image": path.resolve(__dirname, "./.ladle/UnoptimizedImage.tsx"),
@@ -12,3 +12,5 @@ export default defineConfig(({ mode }) => ({
     "process.env": loadEnv(mode, process.cwd(), "NEXT_PUBLIC_"),
   },
 }));
+
+export default viteConfig;
